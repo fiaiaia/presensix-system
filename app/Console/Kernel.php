@@ -28,6 +28,9 @@ class Kernel extends ConsoleKernel
     {
         // Schedule attendance recording daily at 00:00:00
         $schedule->command('attendance:schedule')->dailyAt('22:47');
+        $schedule->command('attendance:notification')
+            ->timezone('Asia/Jakarta')
+            ->dailyAt('08:00');
     }
 
     /**

@@ -54,5 +54,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(DataPerizinan::class, 'created_by');
     }
+
+    public function userLogs()
+    {
+        return $this->hasMany(UserLog::class, 'user_id');
+    }
 }
 ?>
